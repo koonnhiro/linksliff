@@ -6,28 +6,14 @@ $(function () {
         });
     });
 
-    // 参加人数分の氏名欄を生成
-    $('#form-number').click(function () {
-        $('#form-name').empty();
-        var num = $('input[name="number"]:checked').val();
-        for (i = 0; i < num; i++) {
-            $('#form-name').append(
-                `<input class="form-control w-100 mt-1" name="name" maxlength="10">`
-            );
-        }
-    });
-
     // 送信
     $('form').submit(function () {
         var date = $('input[name="date"]').val();
-        var number = $('input[name="number"]:checked').val();
-        var names = '';
-        $('#form-name').children().each(function (i, elm) {
-            names += $(elm).val() + '、';
-        })
-        names = names.slice(0, -1);
+        var type = $('input[name="type"]:checked').val();
+        var from = $('input[name="from"]:checked').val();
+        var to = $('input[name="to"]:checked').val();
 
-        var msg = `希望日：${date}\n人数：${number}\n氏名：${names}`;
+        var msg = `希望日：${date}\n区分：${type}\n出発：${from}\n到着：${to}`;
         sendText(msg);
 
         return false;
