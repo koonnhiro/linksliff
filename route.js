@@ -13,7 +13,7 @@ $(function () {
         var from = $('input[name="from"]').val();
         var to = $('input[name="to"]').val();
 
-        var msg = `希望日：${date}\n区分：${type}\n出発：${from}\n到着：${to}`;
+        var msg = `日付：${date}\n区分：${type}\n出発：${from}\n到着：${to}`;
         sendText(msg);
 
         return false;
