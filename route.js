@@ -24,7 +24,7 @@ $(function () {
 
         var msg = `日付：${date}\n区分：${type}\n出発：${from}\n到着：${to}\n金額：${price}円\n合計：${sum}円`;
         sendText(msg);
-        console.log(msg);
+        //console.log(msg);
 
         return false;
     });
