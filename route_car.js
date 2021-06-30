@@ -17,9 +17,9 @@ $(function () {
 
         // 往復の場合
         if (type === "往復") {
-            sum = distance * 2;
+            sum = price * 2;
         } else {
-            sum = distance;
+            sum = price;
         }
 
         var msg = `【車】\n日付：${date}\n区分：${type}\n出発：${from}\n到着：${to}\n金額：${price}円\n合計：${sum}円`;
