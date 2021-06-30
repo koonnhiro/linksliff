@@ -19,6 +19,7 @@ $(function () {
         // 往復の場合
         if (type === "往復") {
             sum = price * 2;
+            distance = distance * 2;
         } else {
             sum = price;
         }
