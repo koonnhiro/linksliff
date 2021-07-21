@@ -13,7 +13,7 @@ $(function () {
         var from = $('input[name="from"]').val();
         var to = $('input[name="to"]').val();
         var distance = $('input[name="distance"]').val();
-        var price = distance * 14;
+        var price = Math.floor(distance * 14;
         var sum;
 
         // 往復の場合
