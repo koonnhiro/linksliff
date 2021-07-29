@@ -14,3 +14,14 @@ $(function () {
         return false;
     });
 });
+
+function changeDisplay() {
+    if ( document.Form["vehicle"][2].checked ) {
+        document.Form["inputNumber"].disabled = false;
+        document.getElementById('input-number').style.display = "inline";
+    } else {
+        document.Form["inputNumber"].disabled = true;
+        document.getElementById('input-number').style.display = "none";
+    }
+}
+window.onload = changeDisplay;
