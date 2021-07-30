@@ -1,9 +1,7 @@
 function changeDisplay() {
     if ( document.Form1["vehicle"][2].checked ) {
-        document.Form1["inputNumber"].disabled = false;
         document.getElementById('input-number').style.display = "inline";
     } else {
-        document.Form1["inputNumber"].disabled = true;
         document.getElementById('input-number').style.display = "none";
     }
 }
