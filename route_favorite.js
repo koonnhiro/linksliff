@@ -1,8 +1,12 @@
 function changeDisplay() {
+    // 車の場合
     if ( document.Form1["vehicle"][2].checked ) {
-        document.getElementById('input-number').style.display = "inline";
+        document.getElementById('display-text1').style.display = "none";
+        document.getElementById('display-text2').style.display = "inline";
+    // 電車・バスの場合
     } else {
-        document.getElementById('input-number').style.display = "none";
+        document.getElementById('display-text1').style.display = "inline";
+        document.getElementById('display-text2').style.display = "none";
     }
 }
 window.onload = changeDisplay;
