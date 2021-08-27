@@ -2,10 +2,10 @@ $(function () {
 
     // 送信
     $('form').submit(function () {
-        var from = $('input[name="from"]').val();
-        var to = $('input[name="to"]').val();
+        var client = $('input[name="client"]').val();
+        var anken = $('input[name="anken"]').val();
 
-        var msg = `【案件登録】\nクライアント名：${from}\n案件名：${to}`;
+        var msg = `【案件登録】\nクライアント名：${client}\n案件名：${anken}`;
         sendText(msg);
 
         return false;
