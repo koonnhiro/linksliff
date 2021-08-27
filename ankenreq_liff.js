@@ -23,11 +23,11 @@ function initializeLiff(liffId) {
 }
 
 function sendText(text) {
-    // if (!liff.isInClient()) {
-    //     shareTargetPicker(text);
-    // } else {
+    if (!liff.isInClient()) {
+        shareTargetPicker(text);
+    } else {
         sendMessages(text);
-    // }
+    }
 }
 
 // LINEトーク画面上でメッセージ送信
