@@ -12,7 +12,9 @@ $("#registerClient").on("click", function() {
 
 //顧客登録時のコールバック関数
 function postAction(e) {
-  alert("コールバック");
+  var msg1 = e[0];
+  var msg2 = e[1];
+  alert("コールバック" + msg1 + msg2);
 }
 
 function error(e) {
