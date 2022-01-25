@@ -5,22 +5,6 @@ $(document).ready(function () {
     initializeLiff(liffId);
 })
 
-//顧客登録ボタンクリック時のダイアログ処理
-$("#registerClient").on("click", function() {
-    google.script.run.withSuccessHandler(postAction).withFailureHandler(error).registerNewData("位置情報のテスト");
-});
-
-//顧客登録時のコールバック関数
-function postAction(e) {
-  var msg1 = e[0];
-  var msg2 = e[1];
-  alert("コールバック" + msg1 + msg2);
-}
-
-function error(e) {
-  alert(e.message);
-}
-
 function initializeLiff(liffId) {
     liff
         .init({
