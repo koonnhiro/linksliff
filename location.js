@@ -52,16 +52,7 @@ function shareTargetPicker(text) {
     });
 }
 
-$(function () {
-
-    // 送信
-    $('form').submit(function () {
-        var client = $('input[name="client"]').val();
-        var anken = $('input[name="anken"]').val();
-
-        var msg = `【位置情報】\nクライアント名：${client}\n案件名：${anken}`;
-        sendText(msg);
-
-        return false;
-    });
-});
+//成功時に実行
+function update(){
+  window.alert("正しい内容を入力してください。");
+}
